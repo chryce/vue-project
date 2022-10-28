@@ -27,3 +27,4 @@ npm run dev
 ```sh
 npm run build
 ```
+script setup,引入的组件可以自动注册，不需要再通过 components 进行注册

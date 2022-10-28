@@ -1,10 +1,20 @@
 <template>
-  <div>
+  <div class="component">
     <div>
-      <to-do-list-v1/>
+      <div class="test-section">
+        <to-do-list-v1 view="todo-v1"/>
+      </div>
+      <div class="test-section">
+        <to-do-list-v1 view="todo-v1" a="v1-a" b="v1-b"/>
+      </div>
     </div>
     <div>
-      <to-do-list-v2/>
+      <div class="test-section">
+        <to-do-list-v2 view="todo-v1"/>
+      </div>
+      <div class="test-section">
+        <to-do-list-v2 view="todo-v1" a="v2-a" b="v2-b"/>
+      </div>
     </div>
   </div>
 </template>
@@ -19,10 +29,16 @@ export default {
     toDoListV1,
     toDoListV2
   }
-
 }
 </script>
 
 <style scoped>
 
+div.component div.test-section {
+  display: inline-block;
+  width: 200px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: aliceblue
+}
 </style>

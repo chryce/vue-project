@@ -1,24 +1,80 @@
 <template>
   <div>
-    ToDoListV2
+    {{view}}-代办2
     <ul>
       <li v-for="item in todoList">
         <input type="checkbox" v-bind:checked="item.isCheck"/>
         {{ item.todo }}
       </li>
     </ul>
+
+    <p>
+      <button @click="setAb">reactive</button>
+    </p>
+    <div>
+      defineProps:
+      <ul>
+        <li>a:{{ a }}</li>
+        <li>b={{ b }}</li>
+      </ul>
+    </div>
+    <div>
+      reactive:
+      <ul>
+        <li>ra:{{ ra }}</li>
+        <li>rb={{ rb }}</li>
+      </ul>
+    </div>
+
+
   </div>
 </template>
 
 <script setup>
+import {reactive, toRefs} from "vue"
+
 let todoList = [
-  {todo: "我想看海", isCheck: false},
-  {todo: "我想浪漫", isCheck: true},
+  {todo: "编码", isCheck: false},
+  {todo: "发布", isCheck: true},
 ]
+
+const props = defineProps({
+  view: {
+    type: String,
+    default: ""
+  },
+  a: {
+    type: String,
+    default: "你好"
+  },
+  b: {
+    type: String,
+    default: "中国"
+  },
+})
+
+const state = reactive({
+  ra: "你好",
+  rb: "中国"
+})
+
+const setAb = () => {
+  state.ra = "Hello"
+  state.rb = "World"
+}
+
+const {a, b} = toRefs(props)
+const {ra, rb} = toRefs(state)
+
 </script>
 
 <style scoped>
 li {
   list-style: none;
+}
+
+button {
+  background: darkgreen;
+  color: blanchedalmond;
 }
 </style>
