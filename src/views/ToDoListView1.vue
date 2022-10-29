@@ -22,6 +22,7 @@
 <script>
 import toDoListV1 from "../components/ToDoListV1.vue";
 import toDoListV2 from "../components/ToDoListV2.vue";
+import '../assets/ToDoList.css'
 
 export default {
   name: "ToDoListView1",
@@ -31,14 +32,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-div.component div.test-section {
-  display: inline-block;
-  width: 200px;
-  margin-top: 20px;
-  margin-right: 20px;
-  background-color: aliceblue
-}
-</style>

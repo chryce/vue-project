@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{view}}-代办1
+    {{ view }}-代办1
     <ul>
       <li v-for="item in todoList">
         <input type="checkbox" v-bind:checked="item.isCheck"/>
@@ -10,17 +10,11 @@
     <button @click="setAb">reactive</button>
     <div>
       defineProps:
-      <ul>
-        <li>a:{{ a }}</li>
-        <li>b={{ b }}</li>
-      </ul>
+      <p>{{ a }},{{ b }}</p>
     </div>
     <div>
       reactive:
-      <ul>
-        <li>ra:{{ ra }}</li>
-        <li>rb={{ rb }}</li>
-      </ul>
+      <p>{{ ra }},{{ rb }}</p>
     </div>
   </div>
 </template>
@@ -64,10 +58,8 @@ export default {
     console.log("************************************")
 
     const setAb = () => {
-      debugger
       state.ra = "Hello"
       state.rb = "World"
-      debugger
     }
     return {
       ...toRefs(state),

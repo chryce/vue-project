@@ -1,29 +1,22 @@
 <template>
   <div>
-    {{view}}-代办2
+    {{ view }}-代办2
     <ul>
       <li v-for="item in todoList">
         <input type="checkbox" v-bind:checked="item.isCheck"/>
         {{ item.todo }}
       </li>
     </ul>
-
     <p>
       <button @click="setAb">reactive</button>
     </p>
     <div>
       defineProps:
-      <ul>
-        <li>a:{{ a }}</li>
-        <li>b={{ b }}</li>
-      </ul>
+      <p>{{ a }},{{ b }}</p>
     </div>
     <div>
       reactive:
-      <ul>
-        <li>ra:{{ ra }}</li>
-        <li>rb={{ rb }}</li>
-      </ul>
+      <p>{{ ra }},{{ rb }}</p>
     </div>
 
 
