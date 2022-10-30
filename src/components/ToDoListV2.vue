@@ -1,28 +1,3 @@
-<template>
-  <div>
-    {{ view }}-代办2
-    <ul>
-      <li v-for="item in todoList">
-        <input type="checkbox" v-bind:checked="item.isCheck"/>
-        {{ item.todo }}
-      </li>
-    </ul>
-    <p>
-      <button @click="setAb">reactive</button>
-    </p>
-    <div>
-      defineProps:
-      <p>{{ a }},{{ b }}</p>
-    </div>
-    <div>
-      reactive:
-      <p>{{ ra }},{{ rb }}</p>
-    </div>
-
-
-  </div>
-</template>
-
 <script setup>
 import {reactive, toRefs} from "vue"
 
@@ -60,6 +35,29 @@ const {a, b} = toRefs(props)
 const {ra, rb} = toRefs(state)
 
 </script>
+
+<template>
+  <div>
+    {{ view }}-代办2
+    <ul>
+      <li v-for="item in todoList">
+        <input type="checkbox" v-bind:checked="item.isCheck"/>
+        {{ item.todo }}
+      </li>
+    </ul>
+    <p>
+      <button @click="setAb">reactive</button>
+    </p>
+    <div>
+      defineProps:
+      <p>{{ a }},{{ b }}</p>
+    </div>
+    <div>
+      reactive:
+      <p>{{ ra }},{{ rb }}</p>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 li {

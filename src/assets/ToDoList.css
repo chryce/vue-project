@@ -7,17 +7,17 @@ div.component div.test-section {
     color: darkmagenta;
 }
 
-div > p {
+div.component > p {
     margin-left: 10px;
 }
 
-fieldset {
+div.component fieldset {
     border: 1px solid red;
 }
 
-textarea {
+div.component textarea {
     width: 200px;
 }
-input[type="text"]{
-    width: 200px;
+div.component input[type="text"]{
+    width: 100px;
 }
