@@ -11,8 +11,10 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="You did it!"/>
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/todo-v1">ToDoList-V1</RouterLink>
-        <RouterLink to="/todo-v2">ToDoList-V2</RouterLink>
+        <RouterLink to="/todo-v1">todo-v1</RouterLink>
+        <RouterLink to="/todo-v2">todo-v2</RouterLink>
+        <RouterLink to="/fetch-v1">fetch--v1</RouterLink>
+        <RouterLink to="/fetch-v2">fetch-v2</RouterLink>
         <RouterLink to="/form">Form</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
@@ -58,7 +60,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1080px) {
   header {
     display: flex;
     place-items: center;
