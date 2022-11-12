@@ -16,6 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/fetch-v1">fetch--v1</RouterLink>
         <RouterLink to="/fetch-v2">fetch-v2</RouterLink>
         <RouterLink to="/form">Form</RouterLink>
+        <RouterLink to="/watch">Watch</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>

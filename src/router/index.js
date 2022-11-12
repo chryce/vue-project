@@ -7,6 +7,7 @@ import FetchViewV1 from "../views/FetchViewV1.vue";
 import FetchViewV2 from "../views/FetchViewV2.vue";
 
 import FormView from "../views/FormView.vue";
+import WatchView from "../views/WatchView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -42,6 +43,11 @@ const router = createRouter({
                 path: '/form',
                 name: 'form',
                 component: FormView
+            },
+            {
+                path: '/watch',
+                name: 'watch',
+                component: WatchView
             },
             {
                 path: '/about',
